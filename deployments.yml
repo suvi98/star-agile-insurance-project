@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ais-config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ais
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: ais
+        tier: web
+    spec:
+      containers:
+      - name: nidotiate-container
+        image: bhoisuvarna/movie
+        ports:
+        - containerPort: 8090
+        resources:
+          limits:
+            cpu: 400m
+            memory: 200Mi
+      - name: spring-container
+        image: bhoisuvarna/springbootdocker
+        ports:
+        - containerPort: 8081
+        resources:
+          limits:
+            cpu: 400m
+            memory: 200Mi
+
+---
