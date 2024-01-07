@@ -6,12 +6,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: insure
+      app: ais
       tier: web
   template:
     metadata:
       labels:
-        app: insure
+        app: ais
         tier: web
     spec:
       containers:
