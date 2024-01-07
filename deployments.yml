@@ -24,7 +24,7 @@ spec:
             cpu: 400m
             memory: 200Mi
       - name: spring-container
-        image: bhoisuvarna/springbootdocker
+        image: bhoisuvarna/insurancedomain
         ports:
         - containerPort: 8081
         resources:
