@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ais-config
+  name: insure-config
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ais
+      app: insure
       tier: web
   template:
     metadata:
       labels:
-        app: ais
+        app: insure
         tier: web
     spec:
       containers:
