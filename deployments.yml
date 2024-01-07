@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: insure-config
+  name: aic-config
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ais
+      app: aic
       tier: web
   template:
     metadata:
       labels:
-        app: ais
+        app: aic
         tier: web
     spec:
       containers:
@@ -24,7 +24,7 @@ spec:
             cpu: 400m
             memory: 200Mi
       - name: spring-container
-        image: bhoisuvarna/insurancedomain:latest
+        image: bhoisuvarna/insurancedomain
         ports:
         - containerPort: 8081
         resources:
