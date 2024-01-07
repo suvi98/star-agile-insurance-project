@@ -9,7 +9,7 @@ spec:
         targetPort: 8090
     type: NodePort
     selector:
-      app: insure
+      app: ais
       tier: web    
     ports:
       - protocol: TCP
@@ -17,7 +17,7 @@ spec:
         targetPort: 8081
     type: NodePort
     selector:
-      app: insure
+      app: ais
       tier: web
 
 ---
