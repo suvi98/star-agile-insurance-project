@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aic-config
+  name: aim-config
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aic
+      app: ais
       tier: web
   template:
     metadata:
       labels:
-        app: aic
+        app: ais
         tier: web
     spec:
       containers:
-      - name: nidotiate-container
+      - name: ntr-container
         image: bhoisuvarna/movie
         ports:
         - containerPort: 8090
